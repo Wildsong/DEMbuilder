@@ -49,7 +49,7 @@ Maybe using the geopackage files would be better but they don't exist for every 
 There is still a hole in the southern part of the county, I will
 probably try to fill that with 10m data from NED later on. LATER.
 
-Script: lidar_downloader/tile_merge.py
+python tile_merge.py
 
 I wrote a script that takes each shapefile and merges them all into the FGDB feature class "tileindex".
 Then it takes the county boundary feature class (which I copied into the FGDB for my convenience) and used
@@ -61,7 +61,7 @@ Finally, the script puts the name of each source into the tileindex_clatsop file
 
 #### Download LAZ files
 
-Script: lidar_downloader/lidar_downloader.py
+python lidar_downloader.py
 
 The tileindex rows have columns "Name", "source" and "url". Name is the name of
 the destination file, and URL is the source where you can download the

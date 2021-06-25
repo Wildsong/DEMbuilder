@@ -27,11 +27,10 @@ def download(name, url, output_folder):
     # transferring it.
 
     if os.path.exists(target):
-        logging.info("We already have %s. Skipping it." % target)
+        logging.info("Already have %s" % target)
         return
 
     # If the name starts with a path spec then create the path
-    logging.info("Downloading %s to %s" % (url, target))
     path, filename = os.path.split(target)
     if path:
         os.makedirs(path, exist_ok=True)
