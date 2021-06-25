@@ -74,15 +74,23 @@ If Name has a path in it, it will create the path if it does not exist.
 It logs its activities.
 
 It won't overwrite an existing file, so if you need to re-download
-something delete the file first then re-run the script.
+something delete the file first then re-run the script. This speeds up
+re-running the script to pick up any files it might have failed
+to download due to timeouts or other problems.
 
 ## Uncompress LAZ files
 
-I think the best way to do this is with the laszip.exe tool.
-It will take wildcards but I will probably drive it with another script called lidar_downloader/laz_to_las.py
+I think the best way to do this is with the laszip tool.
 
-Download laszip.exe, latest version 3.4.3
-from http://lastools.org/download/laszip.exe.
+Download laszip-cli.exe, latest version 3.4.3
+from http://lastools.org/download/laszip-cli.exe
+and then run
+
+python laz_to_las.py
+
+This script checks each file for errors. I have been thinking it should automatically delete
+broken files (input or output), so that you could run the downloader again to get the
+missing ones.
 
 ## Build DEMs
 
