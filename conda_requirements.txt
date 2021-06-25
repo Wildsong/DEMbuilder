@@ -1,0 +1,4 @@
+arcgis>=1.8.5
+arcpy
+autopep8
+

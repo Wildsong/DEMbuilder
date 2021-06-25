@@ -1,0 +1,8 @@
+*.pyc
+*~
+*.pdf
+*.pyd
+*.log
+*.laz
+.vs/
+LDQ/LDQ*
