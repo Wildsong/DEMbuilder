@@ -7,7 +7,7 @@
 # ---------------------------------------------------------------------------
 
 # Set the necessary product code
-import arcinfo
+import arceditor
 
 
 # Import arcpy module
